@@ -1,20 +1,21 @@
 name: "Gem Release"
 run-name: "Gem Release for ${{ github.ref }}"
 
-on:
-  # for auto-deploy when merging a release-candidate PR
-  push:
-    branches:
-      - 'master'
-      - '*-stable'
-
-  # for manual release
-  workflow_dispatch:
-    inputs:
-      pr:
-        description: "The number of the merged release candidate PR"
-        required: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   # for auto-deploy when merging a release-candidate PR
+#   push:
+#     branches:
+#       - 'master'
+#       - '*-stable'
+# 
+#   # for manual release
+#   workflow_dispatch:
+#     inputs:
+#       pr:
+#         description: "The number of the merged release candidate PR"
+#         required: true
+# 
 env:
   GEM_NAME: mongoid
   PRODUCT_NAME: Mongoid

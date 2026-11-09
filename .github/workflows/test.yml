@@ -2,9 +2,10 @@
 # at 2021-09-07T16:15:13Z
 ---
 name: Run Mongoid Tests
-'on':
-- push
-- pull_request
+# Triggers intentionally disabled for Argus-OSS-Security.
+# 'on':
+# - push
+# - pull_request
 jobs:
   build:
     name: "${{matrix.ruby}} db:${{matrix.mongodb}}

@@ -1,11 +1,12 @@
 name: "CodeQL"
 
-on:
-  push:
-  pull_request:
-  schedule:
-    - cron: '20 0 * * 0'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#   pull_request:
+#   schedule:
+#     - cron: '20 0 * * 0'
+# 
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})

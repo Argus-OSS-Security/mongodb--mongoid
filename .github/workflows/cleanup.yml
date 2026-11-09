@@ -1,18 +1,19 @@
 name: "Dry-Run Cleanup"
 run-name: "Dry Run Cleanup for ${{ github.ref }}"
 
-on:
-  workflow_dispatch:
-    inputs:
-      confirm:
-        description: Indicate whether you want this workflow to run (must be "true")
-        required: true
-        type: string
-      tag:
-        description: The name of the tag (and release) to clean up
-        required: true
-        type: string
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       confirm:
+#         description: Indicate whether you want this workflow to run (must be "true")
+#         required: true
+#         type: string
+#       tag:
+#         description: The name of the tag (and release) to clean up
+#         required: true
+#         type: string
+# 
 jobs:
   release:
     name: "Dry-Run Cleanup"
